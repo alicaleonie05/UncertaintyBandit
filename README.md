@@ -16,7 +16,7 @@ the modelling results support the notion of increased uncertainty seeking for lo
 <br>
 <br>
 <strong>Requirements</strong> <br>
-python 3.10.0 environment<br>
+python 3.9.4 environment<br>
 <br>
 <br>
 
