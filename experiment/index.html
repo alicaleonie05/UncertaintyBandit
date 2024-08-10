@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/d3.v4.js" charset="utf-8" cache-control="public"></script>
+    <script src="js/experiment_intro.js" charset="utf-8" cache-control="public"></script>
+    <script src="js/js-txt.js" charset="utf-8" cache-control="public"></script>
+    <script src="js/js-helpers-old.js" charset="utf-8" cache-control="public"></script>
+</head>
+
+<body>
+    <div id="displayedDivs" style="display:none;">
+    </div>
+    <div class="content">
+
+        <div class="instruction-div"  id="page0" style="text-align: center; display:block">
+        
+            <h1>Welcome to the study Working Memory and Casino Games!</h1>
+            This study is part of a research project conducted
+            by the <a href="http://cpilab.org/" target="_blank">Computational Principles of Intelligence Group</a><br>
+            at the Max Planck Institute for Biological Cybernetics in Tuebingen, Germany.<br><br>
+            <button id="bot_button" type="button" name="button" class="default_button_instructiondiv" style="display: none;" onclick=saveBotButtonClicked()>Click Here!</button><br>
+    
+            <span text-align="center">
+                <img src="./stimuli/tuebingen.jpg" title="tuebingen" height="200px">
+                <img src="./stimuli/mpi.jpg" title="mpi" height="200px">
+                <figcaption style="font-size: 12px;">By Rabe! - Own work, CC BY-SA 3.0, <a
+                    href=" https://commons.wikimedia.org/w/index.php?curid=33554043" target="_blank"> Source </a>
+                </figcaption>
+            </span>
+    
+            <br>
+            Please switch off your addblockers during the study. That will allow us to trace back any unexpected errors.
+            <br><br>
+       
+            <button id="consent_button" type="button" name="button" id="buttonConsentForm" class="default_button_instructiondiv"
+                onclick="clickStart('page0', 'page1')"> Progress to Informed Consent</button><br>
+        </div>
+
+
+        <div class="instruction-div" id="page1">
+    
+            <h1>Information on tasks and purpose of the study</h1>
+            Today, you are stepping into the role of a gambler visiting a casino. You will play two different types of games.<br>
+            Before playing the games, we will will test your working memory. After playing the games, we will ask you to answer some questions about your personality and emotions.<br>
+            
+            The purpose of the study is to gain knowledge about how different people choose between uncertain options.<br>
+            A decision between uncertain options supposedly happens often in everyday life.<br>
+            An example would be to decide for an icecream flavour.<br>
+            You either decide for a flavour you have already chosen and like or you try out something new because it might taste even better.<br><br>
+    
+            On the next page you will start with the working memory test and you will get detailed instructions about the specific task you
+            are going to carry out.
+            <br>
+        
+            To be eligible to participate, you <strong> MUST </strong> be a fluent speaker of English, and have a keyboard and a mouse or touchpad with your device.<br>
+            
+            <b style="color:maroon;">Please do not accept this task if you do not fit these criteria or are using a touch screen device, it will not work!</b><br>
+
+            When the experiment will change to fullscreen mode, please do not exit the fullscreen mode until the end of the experiment.<br>
+    
+            <h4>How much time will it take and how much can you earn?</h4>
+            The study will take <b>approx. 60 minutes</b>.<br>
+            In any case, you will be paid a base payment of <b>£6.00</b> pounds for your participation.
+            Depending on your performance in the memory test and the casino games you can receive a bonus of up to <b>£5.00</b>.<br>
+                
+    
+            <h4>Confidentiality</h4>
+            Your participation in this study will remain confidential.
+            Your Prolific ID will NOT be shared with anyone outside the research team.
+            
+            <h4>Participation and withdrawal</h4>
+            Your participation in this study is completely voluntary and you may refuse to participate<br>
+            or you may choose to withdraw at any time.<br>
+            However, you will only be paid for the participation upon completion and after clicking the button re-directing you to the prolific webpage and storing your completion code.<br>
+            You will only get paid with your bonus if you also pass 75% or more of the attention checks within the study.<br>
+    
+            <h4>How to contact the researchers?</h4>
+            If you have questions or concerns about your participation or payment
+            please email the <a href="mailto:alica.guzman@tuebingen.mpg.de">researcher</a>
+            or the <a href="mailto:eric.schulz@tuebingen.mpg.de">principal investigator</a>.<br>
+    
+    
+            <h4>Data protection</h4>
+            Your data will be anonymized and only used in the manner described in our data protection sheet,
+            available <a href="https://kyblab.tuebingen.mpg.de/t-reps/data_protection.pdf" target="_blank">here</a>
+            (please do not fill out this sheet!). <br>
+            The following text box summarizes the main points. Please read it carefully and provide consent
+            below:<br>
+            <br>
+    
+            <body onload="myDataProtection()"></body>
+            <textarea id="DataProtection" title="DataProtection" rows="15" cols="100" style="font-size: 100%;"
+            readonly></textarea>
+    
+            <br>
+            <br>
+            By selecting the consent option below, you acknowledge that you fulfill all of the participation
+            criteria and you agree to your data being used as described.
+            <br>
+            <br>
+            <!--here it needs to be WMtask! isntead of page2!! CHANGE-->
+            <button type="button" name="button" id="buttonConsentForm" class="default_button_instructiondiv" onclick="clickStart('page1', 'WMtask')">I consent to participate</button><br><br>
+        </div>
+        <div class= "dispayed-div", id="WMtask", style="display:none;">
+            <b>Data saving in progress...</b>
+        </div>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../styles.css">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/d3.v4.js" charset="utf-8" cache-control="public"></script>
+    <script src="../js/experiment.js" charset="utf-8" cache-control="public"></script>
+    <script src="../js/js-txt.js" charset="utf-8" cache-control="public"></script>
+
+</head>
+
+<body>
+    <div id="displayedDivs" style="display:none;"></div>
+    <div class="progress-container" id = "progressContainer">
+        <div class="progress-bar" id="progress"></div>
+    </div>
+    <div class="content">
+        <div class="instruction-div" id="page2" style="display:block">
+    
+            <h1>Welcome to the Casino!</h1>
+            <br>
+            Today, you find yourself in a casino.<br>
+            In a series of games you are interacting with two slot machines.<br>
+            The slot machines are represented by green squares:<br><br>
+            <span text-align="center">
+                <img src="../stimuli/slot_machines.png" height="150px">
+            </span>
+    
+            <br><br>
+            Each slot machine tends to pay out a certain amount of average points during one game (20 choices), but there is
+            noise on the points on any given play.<br>
+            For example, the average points for the slot machine on the right might be 50 points, but on the
+            first play we might see 38 points because of the noise in the lottery process.<br>
+            On the second play we might get 56 points.<br>
+            If we take the right slot machine again on the third trial, we might get 51 points this time.<br>
+            ... and so on, such that if we were to play the right slot machine 20 times in a row we might see
+            that we can expect on average around 50 points from it.<br><br>
+            Both slot machines might have different amounts of noise, but their average outcome will be determined for one game. Between games the noise and average outcome
+            of each slot machine might change.<br>
+                
+            Depending on the game type, your goal is either to get or retain as many points as possible. You will get paid a bonus depending to how well you manage to do this.<br><br>
+           
+            <button type="button" name="button" class="default_button_instructiondiv" onclick="clickStart('page2', 'page3')">
+                Response Instruction
+            </button>
+    
+        </div>
+    
+        <div class="instruction-div" id="page3" style="display:none">
+            <h1>Instructions How To Respond In The Task</h1>
+    
+            
+            <b>Choose between one of the two slot machines</b><br>
+            You will get paid by the numbers you draw, make sure you try your best.<br>
+            To make your choice use your keyboard. Click on the <b>"&larr;"</b> key to draw from the left slot machine and on the <b>"&rarr;"</b> key to draw from the right slot machine.<br>
+            <br>
+    
+            In each game you make 20 choices.<br><br>
+    
+            There are two different types of games: <br>
+            In one type of games you want to maximize your points. The higher the points you draw the higher will be your bonus payment.
+            Your bonus payment will be determined on every choice you make.<br>
+            In the other type of games you want to retain as many points as possible and thus minimize your loss. Therefore you will start with a counter of points you could maximally loose and your points will be substracted from this starting counter.
+            Your bonus payment will be determined on every choice you make. The more points you lose the more money will be substracted from your bonus payment.<br><br>
+      
+            You will play both games in different blocks of this study. The order will be drawn randomly. Each game will be introduced again before playing it.<br>
+            During all games within the maximization block the average points will be around 50 points per trial. During all games within the minimization block the average points will be around -50 points per trial.<br>
+            Note that your bonus payment is always dependent on how good you perform in comparison to the worst possible performance and not to the absolute number of points you draw.<br><br>
+
+            To check your attention, we will also sometimes ask you to identify the blue slot machine. When one of the blue slot machines appears, this is an attention check and you have to specify which slot machine is the blue one. <br>
+            The attention trial is not part of the game and you will not get points for it. <br>
+            We will ask you to confirm your choice by clicking on the "Confirm Choice" button. If you accidentally clicked the wrong key beforehand, you can correct by pressing the correct key before confirming the choice.<br><br>
+    
+            <button type="button" name="bbutton" class="back_button" onclick="clickStart('page3', 'page2')"> &#8617 Back
+            </button>
+            <button type="button" name="button" class="default_button_instructiondiv" onclick="clickStart('page3', 'page4')">Check
+            Comprehension
+            </button>
+        </div>
+        
+        <div class="instruction-div" id="page4" style="display:none">
+            <fieldset>
+                <legend>Please answer a few questions about this study before proceeding</legend>
+                <p style="font-size:100%;color:maroon;"> You will only be directed to the next page if you manage to
+                    answer all of the questions correctly.</p>
+                <fieldset>
+                    <b>How many choices do you have per game?</b><br>
+                    <label style="font-weight: normal;"><input type="radio" name="q1" id="l11"><span
+                            id="q1l11">
+                            Sometimes 10, sometimes 20.
+                        </span></label><br>
+                    <label style="font-weight: normal;"><input type="radio" name="q1" id="icheck1"><span
+                            id="q1icheck1"> Always 20.
+                        </span></label><br>
+                    <label style="font-weight: normal;"><input type="radio" name="q1" id="l12"><span
+                            id="q1l12">
+                            Always 15. </span></label><br>
+                    <br>
+                </fieldset>
+                <fieldset>
+                    <b>Which choices determine your bonus payment? </b><br>
+                    <label style="font-weight: normal;"><input type="radio" name="q2" id="l21" /><span
+                         id="q2l21">
+                            Only the final choices. </span></label><br>
+                    <label style="font-weight: normal;"><input type="radio" name="q2" id="l22" /><span
+                            id="q2l22">
+                            Every choice plus and extra payment for the final choices.</span></label><br>
+                    <label style="font-weight: normal;"><input type="radio" name="q2" id="icheck2"> <span
+                            id="q2icheck2"> Every choice.</span></label><br>
+                        </span></label><br>
+                    <br>
+                </fieldset>
+                <fieldset>
+                    <b>What determines your bonus payment? </b><br>
+                    <label style="font-weight: normal;"><input type="radio" name="q3" id="l31"><span
+                            id="q3l31">
+                            The payment is independent of the numbers revealed from the slot machines.</span></label><br>
+                    <label style="font-weight: normal;"><input type="radio" name="q3" id="l32"><span
+                            id="q3l32"> You get paid for the points you draw from the slot machines in the first game and lose part of this bonus payment in the loss game.</span></label><br>
+                    <label style="font-weight: normal;"><input type="radio" name="q3" id="icheck3"><span
+                            id="q3icheck3"> You get paid for the points you draw from the slot machines in the first game and by how many points you can retain in the loss game, starting from a starting counter.</span></label><br>
+                    <br>
+                </fieldset>
+                <fieldset>
+                    <b>How do the two slot machines differ in and between games? </b><br>
+                    <label style="font-weight: normal;"><input type="radio" name="q4" id="l41" /><span
+                            id="q4l41">
+                            Both slot machines have the same average values across games. They only differ in their noise.
+                        </span></label><br>
+                    <label style="font-weight: normal;"><input type="radio" name="q4" id="l42" /><span
+                            id="q4l42">
+                            The average values always differ, but the noise stays the same between the two slot
+                            machines across games.</span></label><br>
+                    <label style="font-weight: normal;"><input type="radio" name="q4" id="icheck4"> <span
+                            id="q4icheck4"> The average values and amounts of noise can vary between the two slot
+                            machines across games.
+                        </span></label><br>
+                    <br>
+                </fieldset>
+                <fieldset>
+                    <b> What do you have to do when you encounter an attention check?</b><br>
+                    <label style="font-weight: normal;"><input type="radio" name="q5" id="l51"><span
+                            id="q5l51">
+                            Click with the mouse on the left slot machine. </span></label><br>
+                    <label style="font-weight: normal;"><input type="radio" name="q5" id='l52'><span
+                            id="q5l52">
+                            Click with the mouse on the blue slot machine. </span></label><br>
+                    <label style="font-weight: normal;"><input type="radio" name="q5" id='icheck5'><span
+                            id="q5icheck5">
+                            Indicate which one is the blue slot machine by clicking the "&larr;" key for the left and "&rarr;" key for right slot machine.</span></label><br>
+                    <label style="font-weight: normal;"><input type="radio" name="q5" id='l53'><span
+                            id="q5l53">
+                            Indicate which one is the blue slot machine by clicking the "&larr;" key for the right and "&rarr;" key for the left slot machine. </span></label><br>
+                </fieldset>
+            </fieldset>
+            <br>
+            <button type="button" name="button" class="back_button" onclick="clickStart('page4', 'page3')">
+                &#8617 Back </button>
+            <button type="button" name="button" class="default_button" onclick="instructioncheck('page4', 'game_instruction')"><span id="check"> Check Answers </span>
+            </button>
+    
+            </button>
+        </div>
+        
+        <div class="displayed-div" id="game_instruction">
+            <h2>Ready To Start?</h2>
+                <button type="button" id="ContinueToGamesButton" class="default_button" onclick="clickStartGame0('game_instruction')">Continue to games</button>
+            </button>
+        </div>
+
+        <div class="displayed-div" id="practice1">
+
+            <h1>Reward Game</h1>
+
+            <b>In this game you want to maximize your overall points.<br>
+                Your payment will be determined by the points you earn from your choices compared to the minimum points you could have obtained. 
+            </b><br>
+            You can select between two slot machines by clicking on the <b>"&larr;"</b> and <b>"&rarr;"</b> keys, for left and right slot machines accordingly, on your keyboard.<br>
+            After selecting a slot machine a number of points will be drawn from the slot machine you selected. <br>
+            Your points will be added to the counter at the bottom of the page. <br>
+            <b>In each game, which has 20 choices, the average values and amounts of noise of each of the slot machines stay the same.</b><br>
+            Afterwards the next game starts with possibly different average values and amounts of noise. <br>
+            You will have one practice game.
+            <h2>Ready to Start?</h2>
+                <button type="button" id="practiceButton1" class="default_button" onclick="clickStart('practice1', 'game')">Start Practice Games</button>
+            </button>
+        </div>
+        
+        <div class="displayed-div" id="instruction1">
+            <button type="button" name="button" class="default_button" onclick="clickStart('instruction1', 'game')"> Continue to Game
+            </button>
+        </div>
+
+        <div class="displayed-div" id="practice2">
+            <h1>Loss Game</h1>
+
+            <b>In this game you can lose part of your bonus payment. You want to minimize your loss.<br>
+            You begin with a score of the maximum potential loss, and your payment is determined by the number of points you manage to preserve.
+                </b><br>
+            You can select between two slot machines by clicking on the <b>"&larr;"</b> and <b>"&rarr;"</b> keys, for left and right slot machines accordingly, on your keyboard.<br>
+            After selecting a slot machine a number of points will be drawn from the slot machine you selected. <br>
+            The points will be substracted from the counter at the bottom of the page. <br>
+            <b>In each game, which has 20 choices, the average values and amounts of noise of each of the slot machines stay the same.</b><br>
+            Afterwards the next game starts with possibly different average values and amounts of noise. <br>
+            You will have one practice game.
+            <h2>Ready To Start?</h2>
+                <button type="button" id="practiceButton2" class="default_button" onclick="clickStart('practice2', 'game')">Start Practice Games</button>
+            </button>
+        </div>
+
+        <div class="displayed-div" id="instruction2">
+            <button type="button" name="button" class="default_button" onclick="clickStart('instruction2', 'game')"> Continue to Game
+            </button>
+        </div>
+
+
+        <div id="attention-choice" style="display: none;">
+            <div class="trial-counter" id="attention-instruction" style="align-items: center;">Click the key for the blue box
+                <div class = "choices-container" id ="attention-check" style="align-items: center; top:50%;"> </div>
+                <div class = "confirmButtonContainer" id="attentionConfirmButtonContainer" style="display: none; top:50%;margin-top: 8px;">
+                    <button type="button" class="attentionConfirm_button" id="attentionConfirmButton">Confirm Choice</button>
+                </div>
+
+        </div>
+
+
+        
+    </div>  
+    <div class="displayed-div" id="end">
+        <b> You played all games!
+        </b>
+        Now we will ask you a few questions. Please answer them honestly. Do not navigate back to this page!<br>
+        <button type="button" name="button" class="default_button" onclick="clickStartGame0('end')"> Continue
+        </button>
+    </div>
+
+    <div id="DataSaving" style="display: none; text-align: center;">
+    Data saving in progress...</div>
+
+    <div id="game"> </div>
+</body>
+</html>
