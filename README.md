@@ -16,10 +16,11 @@ the modelling results support the notion of increased uncertainty seeking for lo
 <br>
 <br>
 <strong>Requirements</strong> <br>
-
 python 3.10.0 environment with<br>
 <br>
 <br>
 
-<strong>Requirements</strong> <br>
+<strong>Contains</strong> <br>
 &nbsp; \experiment\ - the coded task (for more detail read ReadMe_RunExperiment.txt within folder)
+&nbsp; Uncertainty_Preferences_Change_From_Exploration_to_Exploitation_Thesis.pdf - written masters thesis
+
