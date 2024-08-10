@@ -7,6 +7,7 @@ Task contains 3 subtasks:
 	3. Questionnaires (./questionnaires_experiment/index.html)
  
 To start experiment introduction run index.html.
+Last page will be ./questionnaires_experiment/end.html
 
 ./js/ contains all self-coded js scripts for bandit task.
 ./jspsych-6.0.4/ and ./jspsych-dist contain jpsych library for OS task. (plus the file for the completion code link [jpsych-link.js].)
