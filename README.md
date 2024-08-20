@@ -1,4 +1,4 @@
-# Uncertainty Preferences Change From Exploration to Exploitation
+# Uncertainty Preferences Change From Exploration to Exploitation (Master Thesis)
 
 Two-armed bandit task, operation span task and psychiatric questionnaires.<br>
 <br>
